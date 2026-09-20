@@ -50,7 +50,6 @@ function BackgroundTile({ background, selected, score, onSelect }: {
 export default function App() {
   const [figmaItem, setFigmaItem] = useState<Illustration | null>(null);
   const [backgroundId, setBackgroundId] = useState<Background['id']>('surface-primary');
-  const [selectionStatus, setSelectionStatus] = useState('Кликните по интерфейсу на холсте Figma.');
   const [analysis, setAnalysis] = useState<AnalysisState | null>(null);
   const [visibleResult, setVisibleResult] = useState<AnalysisByBackground[Background['id']] | undefined>();
   const figmaUrl = useRef<string | null>(null);
@@ -69,12 +68,9 @@ export default function App() {
         figmaUrl.current = url;
         const item = { id: `figma:${message.id}`, name: message.name, url };
         setFigmaItem(item);
-        setSelectionStatus(`Выбрано: ${message.name}`);
       } else if (message.state === 'loading') {
-        setSelectionStatus(message.message);
         setFigmaItem(null);
       } else {
-        setSelectionStatus(message.message);
         setFigmaItem(null);
         if (figmaUrl.current) URL.revokeObjectURL(figmaUrl.current);
         figmaUrl.current = null;
@@ -156,12 +152,7 @@ export default function App() {
       </section>
 
       <section aria-label="Фоны и иллюстрации" className="min-h-0 overflow-y-auto rounded-[24px] border border-[#e6e8ec] bg-white p-6 max-[700px]:min-h-[470px]">
-        <div className="rounded-[14px] bg-[#f4f5f7] px-3 py-2.5">
-          <p className="text-[11px] font-semibold uppercase tracking-wide text-[#737b83]">Активный интерфейс</p>
-          <p className="mt-1 truncate text-[12px] font-medium text-[#333a40]" title={selectionStatus}>{selectionStatus}</p>
-          <p className="mt-1 text-[10px] leading-4 text-[#777f86]">Выберите мышью слой, группу, компонент или фрейм — проверка обновится автоматически.</p>
-        </div>
-        <fieldset className="mt-6">
+        <fieldset>
           <legend className="mb-4 text-[14px] font-semibold text-[#40464c]">Выбери фон для проверки</legend>
           <div className="grid grid-cols-3 gap-x-2 gap-y-3">
             {BACKGROUNDS.map((item) => <BackgroundTile
@@ -173,10 +164,6 @@ export default function App() {
             />)}
           </div>
         </fieldset>
-        <div className="mt-7 rounded-[14px] border border-[#e8eaed] px-4 py-3">
-          <h2 className="text-[12px] font-semibold text-[#40464c]">Как примерить интерфейс</h2>
-          <p className="mt-1 text-[11px] leading-4 text-[#6c747b]">Кликайте по любым объектам в рабочей области Figma. Плагин экспортирует выбранный объект в 500 px и пересчитает все шесть фонов.</p>
-        </div>
       </section>
     </main>
   </div>;
