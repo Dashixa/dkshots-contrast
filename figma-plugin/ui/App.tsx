@@ -152,7 +152,7 @@ export default function App() {
           </p>
         </> : <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
           <div className="flower-placeholder" aria-hidden="true"><span /><span /><span /><span /></div>
-          <p className="mt-7 text-[15px] font-medium text-[#7b8188]">Выберите интерфейс в Figma</p>
+          <p className="mt-7 text-[15px] font-medium text-[#7b8188]">Выберите элемент в рабочей области</p>
           <p className="mt-2 max-w-[260px] text-[11px] leading-4 text-[#9aa0a6]">Подойдёт слой, группа, компонент, инстанс или целый фрейм.</p>
         </div>}
       </section>
