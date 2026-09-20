@@ -1,0 +1,12 @@
+{
+  "name": "DkShots — Проверка контрастности иллюстраций",
+  "id": "1527161955224825047",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "main": "build/code.js",
+  "ui": "build/ui.html",
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

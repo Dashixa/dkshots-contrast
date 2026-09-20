@@ -1,5 +1,6 @@
 node_modules/
 dist/
+figma-plugin/.ui-build/
 *.tsbuildinfo
 .env
 .env.*

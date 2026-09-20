@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@source './*.tsx';
+
+:root { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button { font: inherit; }
+.flower-placeholder { position: relative; width: 116px; height: 116px; }
+.flower-placeholder span { position: absolute; width: 57px; height: 57px; background: #f1f2f4; }
+.flower-placeholder span:nth-child(1) { left: 0; top: 0; border-radius: 100% 100% 0 100%; }
+.flower-placeholder span:nth-child(2) { right: 0; top: 0; border-radius: 100% 100% 100% 0; }
+.flower-placeholder span:nth-child(3) { left: 0; bottom: 0; border-radius: 100% 0 100% 100%; }
+.flower-placeholder span:nth-child(4) { right: 0; bottom: 0; border-radius: 0 100% 100% 100%; }
