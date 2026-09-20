@@ -144,6 +144,12 @@ export default function App() {
           <div className="flex min-h-0 flex-1 items-center justify-center p-7">
             <img src={selected.url} alt={selected.name} className="max-h-full max-w-full object-contain" />
           </div>
+          <p
+            className={`shrink-0 truncate px-7 pb-6 text-center text-[12px] font-medium ${secondaryText}`}
+            title={selected.name}
+          >
+            {selected.name}
+          </p>
         </> : <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
           <div className="flower-placeholder" aria-hidden="true"><span /><span /><span /><span /></div>
           <p className="mt-7 text-[15px] font-medium text-[#7b8188]">Выберите интерфейс в Figma</p>
