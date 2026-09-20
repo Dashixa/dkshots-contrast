@@ -123,7 +123,7 @@ export default function App() {
   return <div className="flex h-screen min-h-[480px] flex-col bg-[#f9fafb] text-[#171b1e]">
     <header className="flex h-[68px] shrink-0 items-center justify-between border-b border-[#e8eaed] bg-white px-6">
       <div className="flex items-center gap-1.5 font-semibold"><BrandMark /><span>DkShots</span></div>
-      <h1 className="text-[16px] font-semibold">Проверка контрастности иллюстраций</h1>
+      <h1 className="text-[16px] font-semibold">Проверка контрастности</h1>
       <span className="rounded-full bg-[#eef0f3] px-2.5 py-1 text-[11px] font-semibold text-[#515861]">FIGMA</span>
     </header>
     <main className="grid min-h-0 flex-1 gap-3 p-4 max-[700px]:grid-cols-1 min-[701px]:grid-cols-2">
